@@ -19,7 +19,7 @@ public class MsmServiceImpl implements MsmService {
         String host = "https://gyytz.market.alicloudapi.com";
         String path = "/sms/smsSend";
         String method = "POST";
-        String appcode = "e09465c3204f4059a8a66ac0eb5b597d";
+        String appcode = "";
         String code ="**code**:"+param.get("code")+",**minute**:5";
         Map<String, String> headers = new HashMap<String, String>();
         //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 83359fd73fe94948385f570e3c139105
@@ -27,7 +27,7 @@ public class MsmServiceImpl implements MsmService {
         Map<String, String> querys = new HashMap<String, String>();
         querys.put("mobile", phonenum);
         querys.put("param", code);
-        querys.put("smsSignId", "2e65b1bb3d054466b82f0c9d125465e2");
+        querys.put("smsSignId", "");
         querys.put("templateId", template);
         Map<String, String> bodys = new HashMap<String, String>();
 
